@@ -1,3 +1,0 @@
-<launch>
-    <node pkg="data_tcp"  type="client"  name="client"  output="screen"></node>
-</launch>

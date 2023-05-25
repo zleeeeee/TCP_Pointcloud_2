@@ -1,29 +1,14 @@
-# Send pointcloud by tcp
+# 2023/5/24   zle
 
-## introduction
-There are two demos that send pointcloud data by tcp. 
+## 更新
+1. 增加eigen双向发送(便于发送context)
+2. 增加扩展标志位
 
-The fisrt demo zle_tcp_1, client send pointcloud by a pcd file, then server receive it and save it as a pcd file.
+## 运行
+server端
 
-![markdown picture](/pcd.png)
+    roslaunch data_tcp_4 message_server.launch
 
-The second demo send pointcloud、odom data used ros.
+client端
 
-## zle_tcp_1
-1.     cmake .
-2.     make
-3.     ./server
-4.     ./client
-
-
-## zle_tcp_ros_2
-1.     catkin_make
-2.     roslaunch message_receive.launch
-3.     roslaunch message_send.launch
-4. publish pointcloud topic or rosbag play your bag
-
-![markdown picture](/demo.png)
-![markdown picture](/rviz.png)
-
-
-# TCP_Pointcloud
+    roslaunch data_tcp_4 messag_client.launch
