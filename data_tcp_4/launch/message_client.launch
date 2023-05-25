@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="data_tcp_4"  type="client"  name="client"  output="screen"></node>
+    <node pkg="data_tcp_4"  type="context_client"  name="context_client"  output="screen"></node>
+</launch>
